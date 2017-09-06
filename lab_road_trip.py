@@ -1,5 +1,6 @@
 import random
 
+# TODO: Clean up printing of empty sets
 
 class TripCalculator(object):
 
@@ -59,6 +60,11 @@ if __name__ == '__main__':
         if answer == "3":
             exit()
         elif answer == "1":
-            trip.visit(answer)
+            trip.visit(input("Please enter a city to visit: "))
+        elif answer == "2":
+            choice = ''
+            while choice.lower() != 'n':
+                print("From there you can visit: ", ", ".join(trip.lookahead(input("Please enter a city to look ahead: "))))
+                choice = input("Would you like to check another city? y/n?: ")
         else:
             pass
