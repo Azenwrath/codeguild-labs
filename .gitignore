@@ -3,4 +3,8 @@ __pycache__.py/
 /pyweather/config.py
 /pyweather/__pycache__.py/
 Blackjack/__pycache__
+Twilio/.idea
+Twilio/__pycache__/
+Twilio/config.py
+
 
