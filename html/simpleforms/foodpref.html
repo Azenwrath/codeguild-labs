@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Login Form</title>
+    <style>label {display: block;}</style>
+</head>
+<body>
+
+<form action="https://example.com/login" enctype="multipart/form-data">
+    <fieldset>
+    <label for="shortdesc">Please enter a short description of what you ate for dinner.</label>
+    <input type="text" name="shortdesc" id="shortdesc">
+    </fieldset>
+
+    <fieldset>
+    <legend>Please check any items that you ate last night from the following list.</legend>
+        <label for="ateMeat">Meat</label>
+    <input type="checkbox" name="ateMeat" id="ateMeat">
+
+        <label for="atePotatoes">Potatoes</label>
+    <input type="checkbox" name="atePotatoes" id="atePotatoes">
+
+        <label for="ateBroccoli">Broccoli</label>
+    <input type="checkbox" name="ateBroccoli" id="ateBroccoli">
+
+        <label for="ateCheese">Cheese</label>
+    <input type="checkbox" name="ateCheese" id="ateCheese">
+
+    </fieldset>
+
+    <fieldset>
+    <legend>Do you identify as vegetarian?</legend><br>
+    <label for="vegYes">Yes</label>
+    <input type="radio" id="vegYes" name="vegetarian" value="yes">
+    <label for="vegNo">No</label>
+    <input type="radio" id="vegNo" name="vegetarian" value="no" checked>
+    </fieldset>
+
+    <fieldset>
+         <select>
+    <option value="vani">Vanilla</option>
+    <option value="choc">Chocolate</option>
+         </select>
+    </fieldset>
+
+    <fieldset>
+
+        <label for="longDesc">Please provide a longer description of your memory of the meal.</label>
+        <textarea name="longDesc" id="longDesc" cols="25" rows="15"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <label for="imageUpload">If you so desire, upload an image of your meal</label>
+        <input type="file" name="imageUpload" id="imageUpload" accept="image/*">
+    </fieldset>
+
+
+    <input type="button" value="Hungry">
+    <input type="submit" value="Submit">
+
+
+
+</form>
+
+
+</body>
+</html>
+
