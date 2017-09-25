@@ -19,32 +19,44 @@ section.firstsection {
 
     justify-content: space-around;
 }
+
 section.secondsection {
     justify-content: flex-end;
 }
+
 section.thirdsection div:nth-child(2) {
     justify-content: flex-end;
     flex-grow: 10;
 }
+
 section.fourthsection {
     flex-direction: column;
     align-content: center;
     align-items: center;
 
-
 }
+
 section.fifthsection {
+    align-items: center;
     flex-wrap: wrap;
 }
+
+.fifthsection div:first-child {
+    order: 1;
+}
+
 section.sixthsection section {
     flex-grow: 3;
 }
-section.sixthsection section:first-child{
+
+section.sixthsection section:first-child {
     flex-direction: column;
 }
-section.sixthsection section:nth-child(2) div{
+
+section.sixthsection section:nth-child(2) div {
     flex-grow: 2;
 }
+
 section.sixthsection section:nth-child(3) {
     flex-direction: row;
     align-items: center;

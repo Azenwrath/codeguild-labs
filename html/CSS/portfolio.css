@@ -108,7 +108,7 @@ footer li {
 	white-space:nowrap;
 }
 
-footer li:first-child::before {
+.emailLink::before {
 	font-size: 1.5em;
 	content: "✉";
 	position:absolute;
@@ -117,7 +117,7 @@ footer li:first-child::before {
 	transform:translate(-50%, -50%);
 }
 
-footer li:last-child::before  {
+.phoneLink::before  {
 	content: "☎";
 	position:absolute;
 	top:-50%;
@@ -125,7 +125,7 @@ footer li:last-child::before  {
 	transform:translate(-50%, -50%);
 }
 
-footer li:nth-child(2)::before {
+.githubLink::before {
 	 content: "";
     width: 10px;
     height: 10px;
