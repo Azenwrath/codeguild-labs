@@ -1,0 +1,89 @@
+header {
+  width: 100%;
+  height: 95vh;
+  background: purple;
+  animation: bg-cycle 5s infinite;
+  animation-direction: alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  header h1, header h2 {
+    text-align: center; }
+
+@keyframes bg-cycle {
+  0% {
+    background: purple; }
+  100% {
+    background: blue; } }
+.project-list {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em; }
+
+.project-list div {
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0;
+  padding: 20px;
+  width: 100%; }
+  .project-list div h2 {
+    text-align: center; }
+  .project-list div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; }
+    .project-list div ul li:nth-child(1) {
+      background: url(https://visualhunt.com/photos/xl/7/flower-bouquet-bunch-daisys.jpg) center;
+      background-size: cover;
+      height: 7em;
+      width: 10em;
+      list-style: none;
+      border: solid black; }
+    .project-list div ul li:nth-child(2) {
+      background: url(https://visualhunt.com/photos/l/7/sky-silhouette-star.jpg) center;
+      background-size: cover;
+      height: 7em;
+      width: 10em;
+      list-style: none;
+      border: solid black; }
+    .project-list div ul li:nth-child(3) {
+      background: url(https://visualhunt.com/photos/l/7/animal-kitten-pet.jpg) center;
+      background-size: cover;
+      height: 7em;
+      width: 10em;
+      list-style: none;
+      border: solid black; }
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0; }
+  .articles article, .articles div {
+    width: 75%;
+    border-radius: 10px;
+    background: #efefef;
+    padding: 20px;
+    margin: 20px; }
+
+footer {
+  width: 100%;
+  height: 60vh;
+  background: purple;
+  animation: bg-cycle 5s infinite;
+  animation-direction: alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,167 @@
+@import "vars";
+
+header {
+  width: 100%;
+  height: 95vh;
+  background: purple;
+  animation: bg-cycle 5s infinite;
+  animation-direction: alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1, h2 {
+    text-align: center;
+
+  }
+
+}
+
+@keyframes bg-cycle {
+  0% {
+    background: purple
+  }
+  100% {
+    background: blue
+  }
+}
+
+.project-list {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+}
+.project-list div {
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+
+
+  h2 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    @for $i from 1 through length($imagelist) {
+      li:nth-child(#{$i}) {
+        background: nth($imagelist, $i) center;
+        background-size: cover;
+        height: 7em;
+        width: 10em;
+        list-style: none;
+        border: solid black;
+      }
+    }
+  }
+
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  article, div {
+    width: 75%;
+    border-radius: 10px;
+    background: #efefef;
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 60vh;
+  background: purple;
+  animation: bg-cycle 5s infinite;
+  animation-direction: alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//
+//p {
+//  background: $maincolor;
+//}
+//
+//@for $i from 1 through length($stringlist) {
+//$currenttext: nth($stringlist, $i);
+//  .photos li:nth-child(#{$i}) {
+//
+//    border: $standardborder;
+//
+//    &:before {
+//      content: '#{$currenttext}';
+//    }
+//  }
+//  }
+//
+//@each $color in map_keys($colormap) {
+//  .aside-#{$color} {
+//    border: solid;
+//    background: map_get($colormap, $color);
+//  }
+//}
+//$inttype: 5;
+//$inwidth: 500px;
+//
+//@while $inttype > 0 {
+//  .while-#{$inttype} {
+//    width: $inwidth + $inttype;
+//    $inttype: $inttype - 1;
+//  }
+//
+//}
+//
+//
+////
+////@mixin border-mixin ($border-dashed) {
+////  @if $border-dashed == true {
+////    border: dashed 15px red;
+////  }
+////  @else {
+////    //background: red;
+////  }
+////}
+////
+////div {
+////  border: solid 1px;
+////  section {
+////    border: dashed 1px;
+////    h2 {
+////      border: dotted 1px;
+////    }
+////  }
+////}
+////
+////
+////header {
+////  @include border-mixin(true);
+////  color: grey;
+////  //background: #333;
+////  //border: darkgray;
+////}
+////
+////aside {
+////  @extend header;
+////  text-align: center;
+////  //background: red;
+////}
+////
+//////$border-dashed: true;
