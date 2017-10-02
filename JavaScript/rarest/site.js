@@ -17,7 +17,7 @@ function findRarestValue(obj) {
     var tallied = {}; // Empty array for holding the ages (key) and frequency count (value)
     var result = { // Default values for most frequent age (age) and how many times it appears (freq)
         age: 0,
-        freq: 0
+        freq: Number.POSITIVE_INFINITY
     };
 
     for (var name in obj) {
@@ -29,9 +29,11 @@ function findRarestValue(obj) {
         }
     }
 
+
     for (var i in tallied) { // Iterates through ages returned by the previous loop and checks for most frequent
         //TODO: Correctly handle matching frequency totals
-        if (tallied[i] >= result.freq) {
+
+        if (tallied[i] <= result.freq) {
             result.age = i;
             result.freq = tallied[i];
         }
@@ -53,5 +55,5 @@ function findRarestKeys(obj) {
 }
 
 console.log("Hello Testing");
-console.log("The most common key is: " + findRarestValue(namesToAges));
+console.log("The rarest key is: " + findRarestValue(namesToAges));
 console.log("The keys with that value are: " + findRarestKeys(namesToAges))
