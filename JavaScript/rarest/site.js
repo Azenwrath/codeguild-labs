@@ -56,4 +56,11 @@ function findRarestKeys(obj) {
 
 console.log("Hello Testing");
 console.log("The rarest key is: " + findRarestValue(namesToAges));
-console.log("The keys with that value are: " + findRarestKeys(namesToAges))
+console.log("The keys with that value are: " + findRarestKeys(namesToAges));
+
+console.log("Lodash: " + _.filter([1, 2, 3, 4, 5 ,6], function (num) {
+    return num % 2 === 0;
+
+}));
+
+
