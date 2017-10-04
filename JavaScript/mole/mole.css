@@ -1,0 +1,18 @@
+h2 {
+    text-align: center;
+}
+
+.tile {
+height: 100px;
+width: 100px;
+background-image: url("hole.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    width: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
