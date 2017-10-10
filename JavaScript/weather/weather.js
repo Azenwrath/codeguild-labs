@@ -1,30 +1,47 @@
 "use strict";
 
-var APPID;
-var output;
+var myAPPID;
+var city;
 
-$.ajax({
+
+function fetchKey () {$.ajax({
     url: 'keys.txt',
     type: 'GET',
     success: function (data) {
-        APPID = data;
-        getWeather();
+        myAPPID = data;
+        navigator.geolocation.getCurrentPosition(getWeatherByLocation);
     }
-});
+})};
 
 
+function getWeatherByLocation (pos) {
 
-
-function getWeather () {
     $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/weather?q=APPID=' + APPID,
-        type: 'POST',
-        success: function (data) {
-            output = data;
-            console.log(output);
-            displayWeather(output);
-        }
+        url: 'https://api.openweathermap.org/data/2.5/weather',
+        data: {
+            APPID: myAPPID,
+            lat: pos.coords.latitude,
+            lon: pos.coords.longitude
 
+
+        },
+        type: 'GET',
+        success: displayWeather
+    })
+};
+
+function getWeatherByCity (city) {
+
+    $.ajax({
+        url: 'https://api.openweathermap.org/data/2.5/weather',
+        data: {
+            APPID: myAPPID,
+            q: city
+
+
+        },
+        type: 'GET',
+        success: displayWeather
     })
 };
 
@@ -44,39 +61,22 @@ function displayWeather (output) {
     var iconURL = 'url("' + 'http://openweathermap.org/img/w/' + output.weather[0].icon + '.png")';
     console.log(iconURL);
     $('#weatherIcon').css("backgroundImage",iconURL);
-
-
-
-
 }
 
 
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
 
-function success(pos) {
-  var crd = pos.coords;
+//Where the magic happens
+fetchKey();
 
-  console.log('Your current position is:');
-  console.log('Latitude: ' + parseInt(crd.latitude));
+$('#locationBtn').click(function () {
+    city = $('#locationText').val();
+    console.log(city);
+    getWeatherByCity(city)
+})
 
-  console.log('Longitude: ' +parseInt(crd.longitude));
-  console.log('More or less ${crd.accuracy} meters.');
-};
 
-function error(err) {
-  console.warn('ERROR(${err.code}): ${err.message}');
-};
 
-navigator.geolocation.getCurrentPosition(success, error, options);
 
-var testsubject = {
-    lat: 20,
-    long: 20
-}
 
-var testoutput = $.param(testsubject);
-console.log("JQuery Param: " + testoutput);
+
+
