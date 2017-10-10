@@ -97,9 +97,15 @@ body {
     border: 0;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn--stripe {
     overflow: hidden;
     position: relative;
+    user-select: none;
+-moz-user-select: none;
 }
 
 .btn--stripe:after {
