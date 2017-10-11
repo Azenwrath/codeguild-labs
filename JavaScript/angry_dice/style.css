@@ -69,6 +69,10 @@ body {
     }
 }
 
+.round {
+    font-weight: bold;
+}
+
 .btn {
     overflow: visible;
     margin: 0;

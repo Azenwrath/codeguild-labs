@@ -2,18 +2,16 @@ body {
     background: dimgrey;
 }
 
-
 #weatherIcon {
     width: 100px;
     height: 100px;
     background-image: url('01d.png');
     background-size: cover;
 
-
 }
 
 .weatherdata {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 275px;
@@ -23,27 +21,22 @@ body {
     border-radius: 15px;
     font-color: white;
 
-
-
 }
-
-
-
 
 
 
 .parent {
-  position: relative;
+    position: relative;
 }
 
 .child {
-  width: 300px;
-  height: 100px;
-  padding: 20px;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-  margin: -70px 0 0 -170px;
+    margin: -70px 0 0 -170px;
 }
