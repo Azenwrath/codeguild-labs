@@ -15,29 +15,29 @@
             <p>Angry Dice is a real-time dice rolling microgame. </p>
             <p>The object is to be the first to six by rolling your dice in ascending order pairs. Players each have two
                 dice they can roll and they can hold a die
-                (except a 6), if it rolls to something they will need.</p>
+                <span id="sixWarning">(except a 6) </span>, if it rolls to something they will need.</p>
         </div>
         <div id="instructionsList">
             <ul>
-                <li id="round1" class="round">Round 1 - Die 1 and Die 2</li>
+                <li id="round1" class="round play">Round 1 - Die 1 and Die 2</li>
                 <li id="round2">Round 2 - Die 3 and Die 4</li>
                 <li id="round3">Round 3 - Die 5 and Die 6</li>
-                <li>If you get two Angry Dice you must start at round 1 again.</li>
+                <li id="twoDiceWarning">If you get two Angry Dice you must start at round 1 again.</li>
             </ul>
         </div>
     </div>
     <div class="content">
         <div id="one">
-            <div id="die1">
-                <img src="img/angry.png" alt="die 1">
+            <div id="die1container">
+                <img id="die1" src="img/3.png" alt="die 1" class="filler">
             </div>
             <button class="btn btn--stripe btn--radius" id="hold1">Hold</button>
         </div>
 
 
         <div id="two">
-            <div id="die2">
-                <img src="img/angry.png" alt="die 1">
+            <div id="die2container">
+                <img id="die2" src="img/3.png" alt="die 1">
             </div>
             <button class="btn btn--stripe btn--radius" id="hold2">Hold</button>
         </div>

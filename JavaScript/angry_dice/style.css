@@ -194,3 +194,68 @@ body {
     bottom: 0;
     background-size: 7px 7px;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+
+    50% {
+        /*transform: scale(1.1, 1.1);*/
+        color: blueviolet;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+}
+
+.play {
+    animation: pulse 3s linear infinite;
+}
+
+.playRed {
+    animation: pulseRed 5s linear;
+}
+
+.fast-wiggle {
+    animation: wiggle 1s linear;
+}
+@keyframes pulseRed {
+    0% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+
+    50% {
+        /*transform: scale(1.1, 1.1);*/
+        color: red;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+}
+.sixWarning {
+    display: inline;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+        color: blueviolet;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        color: #000;
+    }
+}
