@@ -2,7 +2,7 @@ import requests
 import config
 # import json
 package = {}
-package['APPID'] = config.keys['APPID']
+package['APPID'] = config.keys
 
 choice = input("Please enter the name or zip code of the city you would like to view: ")
 while True:
@@ -27,6 +27,7 @@ def weather_output(weather, units):
         unit = "C"
     else:
         unit = "K"
+    print(weather)
     print("The weather in", weather['name'], "is currently", weather['weather'][0]['main'])
     print('The temperature is:', weather['main']['temp'], unit)
 
